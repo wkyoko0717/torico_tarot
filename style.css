@@ -30,22 +30,40 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--charcoal);
 }
 
 body {
-  background-color: var(--charcoal);
-  background-image: url('images/bg.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  /* fixed背景も、サイト本体と同じ横幅（最大540px）で表示する */
-  background-size: min(100%, var(--content-width)) auto;
-  background-attachment: fixed;
+  background-color: transparent;
   color: var(--ink);
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.8;
   max-width: var(--content-width);
   margin: 0 auto;
+}
+
+/*
+  iOS Safari では background-attachment: fixed が通常スクロール背景として
+  扱われることがあり、画像がページ中央にしか表示されない。
+  疑似要素を固定配置し、画像を常にサイト本体の背面に表示する。
+*/
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  left: 50%;
+  width: 100%;
+  max-width: var(--content-width);
+  transform: translateX(-50%);
+  background: var(--charcoal) url('images/bg.png') center center / 100% auto no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 img {
@@ -103,11 +121,8 @@ section {
   padding: 80px 28px 64px;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(147, 116, 98, 0.24) 80%, rgba(58, 29, 14, 0.54) 100%),
-    url('images/bg.png') center center / min(100%, var(--content-width)) auto no-repeat;
-  background-color: #f8eedc;
-  background-attachment: fixed;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(147, 116, 98, 0.24) 80%, rgba(58, 29, 14, 0.54) 100%);
+  background-color: rgba(248, 238, 220, 0.32);
   color: var(--ink);
 }
 
