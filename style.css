@@ -578,7 +578,7 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.9rem;
   font-weight: 300;
-  color: var(--gold-pale);
+  color: var(--gold-deep);
   line-height: 1;
 }
 
@@ -801,8 +801,8 @@ section {
   text-align: left;
 }
 
-.reading-price-title + .reading-price-option,
-.reading-price-option + .reading-price-option {
+.reading-price-title+.reading-price-option,
+.reading-price-option+.reading-price-option {
   border-top: 1px solid rgba(147, 109, 28, 0.5);
 }
 
