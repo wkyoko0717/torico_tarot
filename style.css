@@ -61,7 +61,7 @@ body::before {
   z-index: 0;
 }
 
-body > * {
+body>* {
   position: relative;
   z-index: 1;
 }
@@ -174,7 +174,14 @@ section {
 .hero-title-line,
 .cta-title-line {
   width: 1px;
-  height: 112px;
+  height: 200px;
+  margin: 20px auto;
+  background: rgba(13, 11, 8, 0.2);
+}
+
+.hero-cta-line {
+  width: 1px;
+  height: 120px;
   margin: 20px auto;
   background: rgba(13, 11, 8, 0.2);
 }
@@ -839,7 +846,9 @@ footer p {
 .sticky-text strong {
   display: block;
   color: var(--gold-pale);
+  font-family: var(--font-body);
   font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .btn-sticky {
@@ -918,8 +927,9 @@ footer p {
   }
 
   /* Title lines: draw from top to bottom */
-  html.is-js .hero-title-line.section-reveal,
-  html.is-js .cta-title-line.section-reveal {
+html.is-js .hero-title-line.section-reveal,
+html.is-js .hero-cta-line.section-reveal,
+html.is-js .cta-title-line.section-reveal {
     opacity: 1;
     transform: scaleY(0);
     transform-origin: top;
@@ -928,8 +938,9 @@ footer p {
     will-change: transform;
   }
 
-  html.is-js .hero-title-line.section-reveal.is-visible,
-  html.is-js .cta-title-line.section-reveal.is-visible {
+html.is-js .hero-title-line.section-reveal.is-visible,
+html.is-js .hero-cta-line.section-reveal.is-visible,
+html.is-js .cta-title-line.section-reveal.is-visible {
     transform: scaleY(1);
   }
 }
