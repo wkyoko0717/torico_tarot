@@ -183,7 +183,7 @@ section {
   width: 1px;
   height: 120px;
   margin: 20px auto;
-  background: rgba(13, 11, 8, 0.2);
+  background: rgba(13, 11, 8, 0);
 }
 
 .hero-sub {
@@ -927,9 +927,9 @@ footer p {
   }
 
   /* Title lines: draw from top to bottom */
-html.is-js .hero-title-line.section-reveal,
-html.is-js .hero-cta-line.section-reveal,
-html.is-js .cta-title-line.section-reveal {
+  html.is-js .hero-title-line.section-reveal,
+  html.is-js .hero-cta-line.section-reveal,
+  html.is-js .cta-title-line.section-reveal {
     opacity: 1;
     transform: scaleY(0);
     transform-origin: top;
@@ -938,9 +938,9 @@ html.is-js .cta-title-line.section-reveal {
     will-change: transform;
   }
 
-html.is-js .hero-title-line.section-reveal.is-visible,
-html.is-js .hero-cta-line.section-reveal.is-visible,
-html.is-js .cta-title-line.section-reveal.is-visible {
+  html.is-js .hero-title-line.section-reveal.is-visible,
+  html.is-js .hero-cta-line.section-reveal.is-visible,
+  html.is-js .cta-title-line.section-reveal.is-visible {
     transform: scaleY(1);
   }
 }
