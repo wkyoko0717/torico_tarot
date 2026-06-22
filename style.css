@@ -509,7 +509,7 @@ section {
    PROFILE
    ══════════════════════════════════════ */
 .profile {
-  background: rgba(255, 252, 245, 0.8);
+  background: rgba(255, 252, 245, 0.9);
   text-align: center;
 }
 
@@ -599,7 +599,7 @@ section {
    CURRICULUM
    ══════════════════════════════════════ */
 .curriculum {
-  background: rgba(255, 252, 245, 0.8);
+  background: rgba(255, 252, 245, 0.9);
   text-align: center;
 }
 
