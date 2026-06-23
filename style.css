@@ -514,7 +514,7 @@ section {
    PROFILE
    ══════════════════════════════════════ */
 .profile {
-  background: rgba(255, 252, 245, 0.9);
+  background: rgba(255, 252, 245, 1);
   text-align: center;
 }
 
@@ -633,7 +633,7 @@ section {
   align-items: center;
   gap: 16px;
   padding: 18px 20px;
-  background: rgba(109, 72, 42, 0.08);
+  background: rgb(223, 203, 185);
   text-align: left;
   font-size: 0.84rem;
   color: rgba(13, 11, 8, 0.78);
