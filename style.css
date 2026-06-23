@@ -125,9 +125,8 @@ section {
   text-align: center;
   padding: 80px 28px 64px;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(147, 116, 98, 0.24) 80%, rgba(58, 29, 14, 0.54) 100%);
-  background-color: rgba(248, 238, 220, 0.32);
+  overflow: visible;
+  isolation: isolate;
   color: var(--ink);
 }
 
@@ -138,6 +137,25 @@ section {
   background:
     radial-gradient(circle 220px at 50% 38%, rgba(196, 154, 42, 0.08) 0%, transparent 100%),
     radial-gradient(circle 350px at 50% 38%, rgba(196, 154, 42, 0.04) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/*
+  iOS Safari のラバーバンドでページを下へ引っ張ったときも、
+  Hero 上部に下地が見えないよう薄い膜を画面1枚分だけ上へ延長する。
+  Hero 本体のグラデーションは従来どおりの位置・見え方を維持する。
+*/
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -100svh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) center top / 100% 100svh no-repeat,
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(147, 116, 98, 0) 80%, rgba(58, 29, 14, 0.32) 100%) center bottom / 100% calc(100% - 100svh) no-repeat;
   pointer-events: none;
 }
 
