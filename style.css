@@ -56,7 +56,12 @@ body::before {
   width: 100%;
   max-width: var(--content-width);
   transform: translateX(-50%);
-  background: var(--charcoal) url('images/bg.png') center center / 100% auto no-repeat;
+  /*
+    表示領域の高さはスマホのブラウザUI表示時に変わるため、
+    縦方向を center にすると背景画像の位置も再計算されてしまう。
+    上端基準にして、操作パネルの出入りでも背景を動かさない。
+  */
+  background: var(--charcoal) url('images/bg.png') center top / 100% auto no-repeat;
   pointer-events: none;
   z-index: 0;
 }
