@@ -604,7 +604,7 @@ section {
    CURRICULUM
    ══════════════════════════════════════ */
 .curriculum {
-  background: rgba(255, 252, 245, 0.9);
+  background: rgba(255, 252, 245, 0.96);
   text-align: center;
 }
 
@@ -864,7 +864,7 @@ section {
    FAQ
    ══════════════════════════════════════ */
 .faq {
-  background: rgba(255, 252, 245, 0.8);
+  background: rgba(255, 252, 245, 0.96);
 }
 
 .faq .small-cap {
