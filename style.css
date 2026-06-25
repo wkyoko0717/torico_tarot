@@ -325,7 +325,9 @@ section {
    BUTTONS
    ══════════════════════════════════════ */
 .btn-primary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 18px 44px;
   background: linear-gradient(135deg, rgba(196, 154, 42, 0.55), rgba(232, 201, 107, 0.55));
   color: var(--ink);
@@ -342,6 +344,12 @@ section {
   backdrop-filter: blur(4px);
   cursor: pointer;
   transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-primary-icon {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .btn-primary:hover {
