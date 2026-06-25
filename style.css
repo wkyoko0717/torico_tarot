@@ -532,16 +532,16 @@ section {
    PROFILE
    ══════════════════════════════════════ */
 .profile {
-  background: rgba(255, 252, 245, 0.96);
+  background: rgba(244, 220, 165, 0.96);
   text-align: center;
 }
 
 .profile-name {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.4rem;
   /* font-style: italic; */
-  font-weight: 300;
-  color: var(--gold-deep);
+  font-weight: 400;
+  color: var(--ink);
   margin: 20px 0 4px;
 }
 
@@ -583,14 +583,14 @@ section {
 .stats-row {
   display: flex;
   justify-content: center;
-  border: 1px solid rgba(196, 154, 42, 0.2);
+  border: 1px solid rgba(196, 154, 42, 0.5);
 }
 
 .stat {
   flex: 1;
   padding: 20px 8px;
   text-align: center;
-  border-right: 1px solid rgba(196, 154, 42, 0.2);
+  border-right: 1px solid rgba(196, 154, 42, 0.5);
 }
 
 .stat:last-child {
