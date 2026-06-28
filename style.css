@@ -781,6 +781,14 @@ section {
   text-align: center;
 }
 
+.reading-price-lead {
+  margin-top: 20px;
+  color: rgba(13, 11, 8, 0.72);
+  font-size: 0.78rem;
+  line-height: 2;
+  text-align: center;
+}
+
 .reading-price-box {
   overflow: hidden;
   position: relative;
